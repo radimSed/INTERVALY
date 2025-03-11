@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intervaly</title>
+    <link rel="stylesheet" href="./intervaly.css" type="text/css" />
+  </head>
+  <body>
+    <!--load definition-->
+    <div class="loadDef content-width">
+      <label class="lab" id="loadLab">Zátěž</label>
+      <label id="loadMinLab" class="secondaryLabel">Min</label>
+      <label id="loadSecLab" class="secondaryLabel">Sec</label>
+
+      <input
+        class="loadTime"
+        id="loadMin"
+        type="number"
+        min="0"
+        max="59"
+        value="0"
+      />
+      <label id="loadDelim" class="secondaryLabel">:</label>
+      <input
+        class="loadTime"
+        id="loadSec"
+        type="number"
+        min="0"
+        max="59"
+        value="0"
+      />
+    </div>
+
+    <!--rest definition-->
+    <div class="restDef content-width">
+      <label class="lab" id="restLab">Odpočinek</label>
+      <label id="restMinLab" class="secondaryLabel">Min</label>
+      <label id="restSecLab" class="secondaryLabel">Sec</label>
+
+      <input
+        class="loadTime"
+        id="restMin"
+        type="number"
+        min="0"
+        max="59"
+        value="0"
+      />
+      <label id="restDelim" class="secondaryLabel">:</label>
+      <input
+        class="loadTime"
+        id="restSec"
+        type="number"
+        min="0"
+        max="59"
+        value="0"
+      />
+    </div>
+
+    <!--repeat definition-->
+    <div class="repeatDef content-width">
+      <label class="lab" id="repeatLab">Opakování</label>
+
+      <input
+        class="loadTime"
+        id="repeat"
+        type="number"
+        min="1"
+        max="59"
+        value="1"
+      />
+    </div>
+
+    <!--buttons definition-->
+    <div class="buttons content-width">
+      <button class="button" id="startBtn">Start</button>
+      <button class="button" id="resetBtn" disabled>Reset</button>
+    </div>
+
+    <!-- progress bars section -->
+    <div class="progressBars content-width">
+      <div class="progressTitleDiv">
+        <label class="secondaryLabel">Čas</label>
+      </div>
+
+      <div class="progressLoad">
+        <div class="progress1" id="progressLoad1">
+          <label class="progressLab" id="progressL1">0</label>
+        </div>
+        <div class="progress2" id="progressLoad2"></div>
+      </div>
+
+      <div class="progressTitleDiv">
+        <label class="secondaryLabel">Opakování</label>
+      </div>
+
+      <div class="progressLoad">
+        <div class="progress1" id="progressRep1">
+          <label class="progressLab" id="progressL2">0</label>
+        </div>
+        <div class="progress2" id="progressRep2"></div>
+      </div>
+    </div>
+
+    <label class="lab" id="statLab">Připraven</label>
+
+    <audio id="startSound" src="./beep2.mp3"></audio>
+    <audio id="countDownSound" src="./beep1.mp3"></audio>
+
+    <script src="./intervaly.js"></script>
+  </body>
+</html>
