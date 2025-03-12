@@ -36,12 +36,11 @@ const preRun = () => {
 };
 
 const playSound = (time) => {
-          if(time == 0){
-          startSound.play();
-        }
-        if(time <= 3){
-          countDownSound.play();
-        }
+  if(time == 0){
+    startSound.play();
+  }else if(time <= 3){
+    countDownSound.play();
+  }
 }
 
 //running the excerscise timing
